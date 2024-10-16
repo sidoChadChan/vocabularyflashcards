@@ -11,7 +11,7 @@ def main():
 
 def flashcards(choose):
     try:
-        with open(f"${str(choose)}", "r") as file:
+        with open(f"Sets/{str(choose)}", "r") as file:
             content = file.read()
             print("hej")
             print(content)
