@@ -52,7 +52,7 @@ def infinite_mode(lines):
             print(f"Bledna odpowiedz, poprawna: {word2}\n")
 
 def ten_mode(lines):
-    blacklist = set()
+    blacklist = []
     correct_answers = 0
     for _ in range(10):
         word1, word2 = lines[random.randint(0, len(lines) - 1)].strip().lower().split(" - ")
@@ -64,10 +64,9 @@ def ten_mode(lines):
         answer = input(f"* {word1} - ").lower()
         print("-=======================-")
         if answer == word2:
-            "Poprawna odpowiedz\n"
+            print("Poprawna odpowiedz\n")
             blacklist.append(word1)
             correct_answers += 1
-            print(blacklist)
         else:
             print(f"Bledna odpowiedz, poprawna: {word2}\n")
     print(f"Poprawnych odpowiedzi {correct_answers}/10")
