@@ -16,9 +16,9 @@ def flashcards(choose):
             print("hej")
             print(content)
     except FileNotFoundError:
-        return "Plik nie został znaleziony"
-    except IOError:
-        return "Błąd przy odczycie pliku"
+        print(f"Plik o numerze {choose} nie został znaleziony")
+    except IOError as e:
+        print(f"Błąd przy odczycie pliku: {e}")
 
 if __name__ == "__main__":
     main()
